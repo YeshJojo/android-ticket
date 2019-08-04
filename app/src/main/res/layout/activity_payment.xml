@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#fcfcfc"
+    android:id="@+id/ll">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDarkBlue"
+        android:text="Select Payment Method"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/totalDis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorPrimaryDarkBlue"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="15dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/gpayCard"
+            android:layout_width="100dp"
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_height="120dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/gpay"
+                    android:padding="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDarkBlue"
+                    android:layout_marginTop="10dp"
+                    android:text="Google Pay"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:id="@+id/amazonPay"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/amazon"
+                    android:padding="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDarkBlue"
+                    android:text="Amazon Pay"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:id="@+id/cardPay"
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/card"
+                    android:padding="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorPrimaryDarkBlue"
+                    android:text="Debit Card"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:id="@+id/gpayDetails">
+        <EditText
+            android:id="@+id/gupi"
+            android:layout_gravity="center"
+            android:layout_width="330dp"
+            android:hint="Enter Google Pay UPI"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/gpay"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_blue"
+            android:textColor="@android:color/white"
+            android:text="Pay Now"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:id="@+id/cardDetails">
+        <EditText
+            android:id="@+id/cardno"
+            android:layout_gravity="center"
+            android:layout_width="330dp"
+            android:hint="Enter Card number"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/cardname"
+            android:layout_gravity="center"
+            android:layout_width="330dp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter Name On Card"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/cardcvv"
+            android:layout_gravity="center"
+            android:layout_width="330dp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter CVV number"
+            android:inputType="numberPassword"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/cardPayBtn"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_blue"
+            android:textColor="@android:color/white"
+            android:text="Pay Now"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:id="@+id/apayDetails">
+        <EditText
+            android:id="@+id/aupi"
+            android:layout_gravity="center"
+            android:layout_width="330dp"
+            android:hint="Enter Amazon Pay UPI"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/apay"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_blue"
+            android:textColor="@android:color/white"
+            android:text="Pay Now"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+</LinearLayout>
